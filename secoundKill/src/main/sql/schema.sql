@@ -1,9 +1,9 @@
 -- database init
 -- create database;
 CREATE DATABASE secoundKill;
---use database
+--use database 使用数据库
 use secoundKill;
---create secound kill table
+--create secound kill table 创建秒杀库存表
 CREATE TABLE seckill(
   `seckill_id` bigint NOT NULL AUTO_INCREMENT COMMENT 'product id',
   `name` varchar(120) NOT NULL COMMENT 'product name',
@@ -20,9 +20,9 @@ CREATE TABLE seckill(
 --init data
 INSERT INTO seckill (name,number,start_time,end_time)
 VALUES
-  ('888 yuan secound kill',888,'2016-10-16 00:00:00','2016-10-30 00:00:00'),
-  ('777 yuan secound kill',777,'2016-10-16 00:00:00','2016-10-30 00:00:00'),
-  ('666 yuan secound kill',666,'2016-10-16 00:00:00','2016-10-30 00:00:00');
+  ('888 yuan secound kill',888,'2016-12-16 00:00:00','2017-10-30 00:00:00'),
+  ('777 yuan secound kill',777,'2016-10-16 00:00:00','2017-10-30 00:00:00'),
+  ('666 yuan secound kill',666,'2016-10-16 00:00:00','2017-10-30 00:00:00');
 
 --secound kill detail
 --user login information
@@ -34,6 +34,7 @@ CREATE TABLE success_kill(
 PRIMARY KEY (seckill_id,user_phone), /* combined primary key */
 key idx_create_time(create_time)
   )ENGINE=InnoDB CHARSET=utf8 COMMENT 'secound kill success information';
+---秒杀成功明细表
 
---connect mysql console
+--connect mysql console 连接数据库控制台
 mysql -uroot -p

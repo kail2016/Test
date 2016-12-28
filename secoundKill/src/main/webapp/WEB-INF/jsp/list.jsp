@@ -4,10 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Seckill List</title>
-    <%@include file="common/head.jsp"%>
+    <title>秒杀列表页</title>
+    <%@include file="common/head.jsp"%><!-- 静态包含 -->
 </head>
 <body>
+	<!-- 页面显示部分  -->
     <div class="container">
         <div class="panel panel-default">
             <div class="panel-heading text-center">
@@ -17,12 +18,12 @@
                 <table class="table table-hover">
                     <thead>
                         <tr>
-                            <th>Name</th>
-                            <th>Inventory</th>
+                            <th>名称Name</th>
+                            <th>库存Inventory</th>
                             <th>StartTime</th>
                             <th>EndTime</th>
                             <th>CreateTime</th>
-                            <th>Detail</th>
+                            <th>详情页Detail</th>
                         </tr>
                     </thead>
                     <tbody>

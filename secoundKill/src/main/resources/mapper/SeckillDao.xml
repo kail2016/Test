@@ -2,7 +2,9 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.netease.seckill.dao.SeckillDao">
-    <!-- target:provide sql configuration for DAO interface -->
+    <!-- target:provide sql configuration for DAO interface 
+   		目的： 为DAO接口的方法提供sql语句
+    -->
     <update id="reduceNumber">
         <!-- update sql -->
         UPDATE
@@ -20,7 +22,9 @@
     </update>
 
     <select id="queryById" resultType="Seckill" parameterType="long">
-        <!-- query sql -->
+        <!-- query sql 
+       	 seckill_id as seckillId，因为开启了驼峰转换，所以不需要这样写；
+        -->
         SELECT
           seckill_id,name,number,start_time,end_time,create_time
         FROM

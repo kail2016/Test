@@ -67,7 +67,8 @@ public class Seckill {
 		this.createTime = createTime;
 	}
 
-	@Override public String toString() {
+	@Override
+	public String toString() {
 		final StringBuffer sb = new StringBuffer("Seckill{");
 		sb.append("seckillId=").append(seckillId);
 		sb.append(", name='").append(name).append('\'');

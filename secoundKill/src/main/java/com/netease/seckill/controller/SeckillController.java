@@ -81,7 +81,7 @@ public class SeckillController {
 	@ResponseBody
 	public SeckillResult<SeckillExcution> execute(@PathVariable("seckillId") Long seckillId,@PathVariable("md5") String md5,
 			@CookieValue(value = "killPhone",required = false) Long phone){
-		if(phone == null){
+		if(phone == null){ //springmvc valid
 			return new SeckillResult<SeckillExcution>(false,"do not login");
 		}
 		try{
@@ -101,7 +101,9 @@ public class SeckillController {
 		}
 	}
 
-	@RequestMapping(value = "/time/now",method = RequestMethod.GET,produces = {"application/json;charset=UTF-8"})
+	@RequestMapping(value = "/time/now",
+			method = RequestMethod.GET,
+			produces = {"application/json;charset=UTF-8"})
 	@ResponseBody
 	public SeckillResult<Long> time(){
 		Date date = new Date();

@@ -5,11 +5,18 @@
 <configuration>
     <!-- config overall variable -->
     <settings>
-        <!-- use jdbc's getGenerateKeys to get autoIncreament Id -->
+        <!-- 
+      		  使用JDBC的getGenerateKeys获取数据库自增主键值
+        use jdbc's getGenerateKeys to get autoIncreament Id -->
         <setting name="useGeneratedKeys" value="true"/>
-        <!-- use columns alias to replace columns name ,default:true -->
+        <!-- use columns alias to replace columns name ,default:true
+      	  使用列别名替换列名，默认为true
+      	 select name as title from table
+         -->
         <setting name="useColumnLabel" value="true"/>
-        <!-- open hump's name swap:Table(create_time) ->Entity(createTime) -->
+        <!-- open hump's name swap:Table(create_time) ->Entity(createTime) 
+        	开启驼峰命名转换 
+        -->
         <setting name="mapUnderscoreToCamelCase" value="true"/>
 
     </settings>

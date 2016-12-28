@@ -9,6 +9,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
@@ -27,7 +28,7 @@ import static org.junit.Assert.*;
 public class SeckillServiceTest {
 
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
-	@Resource
+	@Autowired
 	SeckillService seckillService;
 
 	@Test
@@ -43,9 +44,10 @@ public class SeckillServiceTest {
 		logger.info("2.seckill={}",seckill);
 	}
 
+	//集成测试代码完整逻辑，注意可重复执行
 	@Test
 	public void testSeckillLogic() throws Exception {
-		long id = 1002l;
+		long id = 1002;
 		Exposer exposer = seckillService.exposeSeckillUrl(id);
 		if(exposer.isExposed()){
 			logger.info("exposer={}",exposer);
@@ -61,7 +63,7 @@ public class SeckillServiceTest {
 			}
 		}
 		else{
-			//seckill don't start
+			//seckill don't start 秒杀未开启
 			logger.warn("exposer={}",exposer);
 		}
 	}
@@ -83,7 +85,7 @@ public class SeckillServiceTest {
 	}
 	@Test
 	public void executeSeckillProcedure(){
-		long seckillId = 1004;
+		long seckillId = 1004l;
 		long phone = 18868831756l;
 		Exposer exposer = seckillService.exposeSeckillUrl(seckillId);
 		if(exposer.isExposed()){

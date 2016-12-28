@@ -4,6 +4,7 @@ import java.io.Serializable;
 
 /**
  * Created by Jo on 10/19/16.
+ * 所有的Ajax请求返回的类型，封装Json结果
  */
 //packing json result
 public class SeckillResult<T> {

@@ -6,17 +6,23 @@ import com.netease.seckill.entity.SuccessKill;
 /**
  * Created by Jo on 10/18/16.
  * packing result after seckill
+ * 封装秒杀执行后的结果
+ * 
  */
 public class SeckillExcution {
 
 	private long seckillId;
-
+	
+	//秒杀执行结果的状态
 	private int status;
 
+	//状态的标示
 	private String statusInfo;
 
+	//秒杀成功对象
 	private SuccessKill successKill;
 
+	
 	public SeckillExcution(long seckillId, SeckillStatusEnum seckillStatusEnum, SuccessKill successKill) {
 		this.seckillId = seckillId;
 		this.status = seckillStatusEnum.getStatus();
@@ -29,7 +35,8 @@ public class SeckillExcution {
 		this.statusInfo = seckillStatusEnum.getStatusInfo();
 	}
 
-		public long getSeckillId() {
+	
+	public long getSeckillId() {
 		return seckillId;
 	}
 

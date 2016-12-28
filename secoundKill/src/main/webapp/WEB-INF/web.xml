@@ -5,6 +5,16 @@
          version="3.1">
 
     <!--修改servlet版本为3.1-->
+    
+	<!-- 加载spring容器 -->
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>classpath:spring/spring-service.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
+	</listener>
+	
     <!--配置DispatcherServlet-->
     <servlet>
         <servlet-name>spring-mvc</servlet-name>
@@ -17,8 +27,9 @@
         -->
         <init-param>
             <param-name>contextConfigLocation</param-name>
-            <param-value>classpath:spring/spring-*.xml</param-value>
+            <param-value>classpath:spring/springmvc.xml</param-value>
         </init-param>
+        <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
         <servlet-name>spring-mvc</servlet-name>

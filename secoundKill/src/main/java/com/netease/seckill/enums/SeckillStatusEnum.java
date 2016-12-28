@@ -2,6 +2,8 @@ package com.netease.seckill.enums;
 
 /**
  * Created by Jo on 10/18/16.
+ * 使用枚举表达常量数据字段
+ * 
  */
 public enum SeckillStatusEnum {
 	SUCCESS(1,"successkill"),
