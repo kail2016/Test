@@ -53,7 +53,7 @@ public class SeckillServiceImpl implements SeckillService{
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	public List<Seckill> getSeckillList() {
-		return seckillDao.queryAll(0, 4);
+		return seckillDao.queryAll(0, 100);
 	}
 
 	public Seckill getById(long seckillId) {
@@ -61,7 +61,7 @@ public class SeckillServiceImpl implements SeckillService{
 	}
 
 	/**
-	 * 
+	 * 输出秒杀接口地址
 	 * expose seckill url when seckill start,else expose system time and kill time
 	 * @param seckillId
 	 */

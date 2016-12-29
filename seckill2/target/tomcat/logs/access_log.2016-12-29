@@ -1,0 +1,4 @@
+0:0:0:0:0:0:0:1 - - [29/Dec/2016:15:19:51 +0800] "GET /seckill/list HTTP/1.1" 200 5916 http-bio-8080-exec-1 2192
+0:0:0:0:0:0:0:1 - - [29/Dec/2016:15:19:54 +0800] "GET /seckill/1002/detail HTTP/1.1" 200 3230 http-bio-8080-exec-2 145
+0:0:0:0:0:0:0:1 - - [29/Dec/2016:15:19:54 +0800] "GET /seckill/resources/script/seckill.js HTTP/1.1" 304 - http-bio-8080-exec-3 11
+0:0:0:0:0:0:0:1 - - [29/Dec/2016:15:19:54 +0800] "GET /seckill/time/now HTTP/1.1" 200 61 http-bio-8080-exec-4 70
